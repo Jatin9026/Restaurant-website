@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chefs Kitchen - Home</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            scroll-behavior: smooth;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #f4a261;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin: 10px 0 0;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #264653;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f4a261;
+            border-bottom: 2px solid #f4a261;
+        }
+
+        /* Hero Image Section */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-text {
+            flex: 1;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .hero-text h2 {
+            font-size: 36px;
+            color: #264653;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .hero-image {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Food Menu Section */
+        .menu-section {
+            padding: 50px 20px;
+            background-color: #ffffff;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .menu-section h2 {
+            text-align: center;
+            color: #264653;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .menu-item {
+            text-align: center;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Menu Item Image Circular Transformation */
+        .menu-item img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 50%;  /* This makes the image circular */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+        }
+
+        /* Menu Item Image Hover Effect */
+        .menu-item:hover img {
+            transform: scale(1.1); /* Slightly enlarge the image on hover */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a shadow for a lifted effect */
+        }
+
+        .menu-item h3 {
+            font-size: 20px;
+            color: #264653;
+            margin: 15px 0;
+        }
+
+        .menu-item p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .menu-item span {
+            font-size: 18px;
+            font-weight: bold;
+            color: #f4a261;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #264653;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .hero-text h2 {
+                font-size: 28px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .menu-items {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chefs Kitchen</h1>
+        <p>Your favorite place for delicious food!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="reserve.html">Reserve Your Seat</a></li>
+            <li><a href="review.html">Customer Review</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Welcome to Chefs Kitchen</h2>
+            <p>Discover a world of exquisite flavors and an unforgettable dining experience in the heart of the city. Visit us for the perfect meal.</p>
+        </div>
+        <div class="hero-image">
+            <img src="1600w-O0sCiXVwcyA.webp" alt="Restaurant Interior">
+        </div>
+    </section>
+
+    <!-- New Menu Section -->
+    <section class="menu-section">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="pizza.avif" alt="Food Item 1">
+                <h3>Pizza</h3>
+                <p>Pizza is a baked Italian dish of flattened bread dough topped with tomato sauce, cheese, and other ingredients</p>
+                <span>₹299</span>
+            </div>
+            <div class="menu-item">
+                <img src="ccb7dc2ba2b054419f805da7f05704471634886169.avif" alt="Food Item 2">
+                <h3>Burger</h3>
+                <p>A burger is a patty of ground beef grilled and placed between two halves of a bun</p>
+                <span>₹299</span>
+            </div>
+            <div class="menu-item">
+                <img src="chicken.avif" alt="Food Item 3">
+                <h3>Chicken</h3>
+                <p>Juicy grilled chicken breast with a tangy lemon-herb marinade, served with roasted vegetables"</p>
+                <span>₹499</span>
+            </div>
+            <div class="menu-item">
+                <img src="rolls.avif" alt="Food Item 4">
+                <h3>Rolls</h3>
+                <p> A small, round or oblong loaf of bread that's usually eaten with a meal</p>
+                <span>₹99</span>
+            </div>
+            <div class="menu-item">
+                <img src="briayani.avif" alt="Food Item 4">
+                <h3>Biryani</h3>
+                <p> a celebratory rice and meat dish cherished in the Indian sub-continent.</p>
+                <span>₹199</span>
+            </div>
+            <div class="menu-item">
+                <img src="thali.avif" alt="Food Item 4">
+                <h3>Thali</h3>
+                <p> Typical dishes include rice, dal, vegetables, roti, papad, dahi (yogurt), small amounts of chutney or pickle, and a sweet dish.</p>
+                <span>₹159</span>
+            </div>
+            <div class="menu-item">
+                <img src="fried.avif" alt="Food Item 4">
+                <h3>Fried Rice</h3>
+                <p> a dish of cooked rice that's stir-fried with other ingredients like eggs, vegetables, meat, or seafood</p>
+                <span>₹199</span>
+            </div>
+            <div class="menu-item">
+                <img src="north india.avif" alt="Food Item 4">
+                <h3>North Indian</h3>
+                <p>North Indian cuisine is known for its rich variety of breads and dishes made with wheat, rice, and vegetables</p>
+                <span>₹209</span>
+            </div>
+            <div class="menu-item">
+                <img src="noodles.avif" alt="Food Item 4">
+                <h3>Noodles</h3>
+                <p>Made from unleavened dough that is rolled flat and cut into long strips or strings.</p>
+                <span>₹259</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Chefs Kitchen. All rights reserved.</p>
+    </footer>
+</body>
+</html>
